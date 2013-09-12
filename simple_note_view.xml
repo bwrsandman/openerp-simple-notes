@@ -1,0 +1,46 @@
+<?xml version = "1.0" ?>
+<openerp>
+    <data>
+
+        <!-- Main view of every note -->
+        <record model="ir.ui.view" id="simple_note_tree_view">
+            <field name="name">sn.note.tree</field>
+            <field name="model">sn.note</field>
+            <field name="type">tree</field>
+            <field name="arch" type="xml">
+                <tree string="SimpleNotesTree">
+                    <field name="title"/>
+                    <field name="content"/>
+                    <field name="user_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- New form note view -->
+        <record model="ir.ui.view" id="simple_note_form_view">
+            <field name="name">sn.note.form</field>
+            <field name="model">sn.note</field>
+            <field name="type">form</field>
+            <field name="arch" type="xml">
+                <form string="SimpleNotesForm">
+                    <field name="title"/>
+                    <field name="content"/>
+                    <field name="user_id"/>
+                </form>
+            </field>
+        </record>
+
+        <!-- Action -->
+        <record model="ir.actions.act_window" id="action_simple_note_tree">
+            <field name="name">Your notes</field>
+            <field name="view_id" ref="simple_note_tree_view"/>
+            <field name="res_model">sn.note</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
+        <menuitem name="Simple Notes Module" id="simple_note_menu" icon="terp-project" />
+        <menuitem name="My Simple Notes" id="simple_note_menu_mainform" parent="simple_note_menu" />
+        <menuitem name="All notes" id="simple_note_tree_list" parent="simple_note_menu_mainform" action="action_simple_note_tree"/>
+
+    </data>
+</openerp>
