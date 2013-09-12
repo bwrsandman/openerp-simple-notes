@@ -14,4 +14,5 @@ class sn_note(osv.Model):
         'user_id': fields.many2one('res.users', string=_('Owner'),
                                    ondelete='cascade', required=True,
                                    select=1),
+        'note_widget': fields.char('Simple Widget'),
     }
