@@ -8,6 +8,7 @@ This module is a very simple "notes" addon for OpenERP.""",
     'website': 'http://www.savoirfairelinux.com',
     'depends': ['base'],
     'data': ['simple_note_view.xml'],
+    'demo': ['simple_note_demo.xml'],
     'test': [],
     'installable': True,
 }

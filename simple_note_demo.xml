@@ -1,0 +1,19 @@
+<openerp>
+    <data noupdate="1">
+        <record model="sn.note" id="note1">
+            <field name="title">Hello</field>
+            <field name="content">This is my first simple note.</field>
+            <field name="user_id">1</field>
+        </record>
+        <record model="sn.note" id="note2">
+            <field name="title">It is raining today</field>
+            <field name="content">Where is my umbrella?</field>
+            <field name="user_id">3</field>
+        </record>
+        <record model="sn.note" id="note3">
+            <field name="title">Where is Bryan?</field>
+            <field name="content">Bryan is in the kitchen.</field>
+            <field name="user_id">3</field>
+        </record>
+    </data>
+</openerp>
